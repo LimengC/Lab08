@@ -11,7 +11,6 @@ public class CustomListTest {
         City calgary = new City("Calgary", "AB");
 
         assertFalse(list.hasCity(calgary));
-
         list.addCity(calgary);
         assertTrue(list.hasCity(calgary));
     }
@@ -32,7 +31,6 @@ public class CustomListTest {
     public void testDeleteCityThrowsWhenMissing() {
         CustomList list = new CustomList();
         City vancouver = new City("Vancouver", "BC");
-
         list.deleteCity(vancouver);
     }
 
@@ -50,5 +48,11 @@ public class CustomListTest {
 
         list.addCity(calgary);
         assertEquals(2, list.countCities());
+    }
+
+
+    @Test
+    public void tddRedPhaseMarker() {
+        fail("Intentional RED phase failure for CI. Remove this test in the next commit.");
     }
 }
